@@ -15,12 +15,7 @@ export class QuoteComponent implements OnInit {
     new Quote( 2, "Robert Mugabe", "It is the peculiar quality of a fool to perceive the faults of others and to forget his own." ,new Date(2011,6,9) ,0, 0),
   ];
 
-  addNewQuote(quote){
-    let quoteLength = this.quotes.length; //length of quotes in object quotes array
-    quote.id = quoteLength+1; //id of newly created array
-    quote.completeDate = new Date(quote.completeDate)//assigns current date of generating item in array 
-    this.quotes.push(quote) //pushes inputted form contents into object array
-  }
+  
 
 //  toggle=false;
 
@@ -42,9 +37,18 @@ export class QuoteComponent implements OnInit {
       
     }
   }
+
+  addNewQuote(quote){
+    let quoteLength = this.quotes.length;
+    quote.id = quoteLength + 1;
+    let cDate = new Date(quote.completeDate); //Add new variable to hold the input from the form as date.
+    quote.completeDate = new Date(cDate.getFullYear(), cDate.getMonth(), cDate.getDate()); //Convert the date being passed to the Goal object to the correct format (YYYY, MM, DD).
+    this.quotes.push(quote);
+}
   constructor() { }
 
   ngOnInit(): void {
   }
+  
 
 }

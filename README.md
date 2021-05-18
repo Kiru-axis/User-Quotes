@@ -27,7 +27,7 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Live Link
 
-Run `ng e2e` to execute the end-to-end tests via [Protractor](http://www.protractortest.org/).
+[Link]().
 
 ## Licence
 
