@@ -3,9 +3,14 @@
         <div class="card-body">
             <p> Quote: {{quote.description}}</p>
             <p>Published: {{quote.completeDate|dateCount}}</p>
+            <div class="">
+                <p>Likes</p>
+                <button class="btn btn-success mx-3 btn-sm"(click) = "likes()" >Inspired <span>{{like}}</span></button>
+                <button class="btn btn-dark mx-3 btn-sm" (click) = "dislike()">Not Inspired <span>{{nolike}}</span></button>
+              </div>
         </div>
         <div class="card-footer">
-            <button (click)= 'quoteDelete(true)' class="btn btn-outline-info">Delete quote</button>
+            <button (click)= 'quoteDelete(true)' class="btn btn-sm btn-warning">Delete quote</button>
         </div>
     </div>
 </div>

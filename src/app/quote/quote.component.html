@@ -11,17 +11,19 @@
     <div class="col-md-6">
       <div *ngFor='let quote of quotes; let i= index'>
           <div class="quote-buttnToggle">
-            <!-- <div>
-              <h4 id="{{i}}"appHighlight>{{quote.author}} due on{{quote.completeDate | date| uppercase}}</h4>
-            </div> -->
+            <div>
+              <!-- <h4 id="{{i}}"appHighlight>{{quote.author}} due on{{quote.completeDate | date| uppercase}}</h4> -->
+            </div>
             <div (click)='toggleDetails(i)'  appHighlight> <span id="quoteComponentBinding">{{quote.id}}.  {{quote.author}} due on</span>{{quote.completeDate|date|uppercase}}</div>
-            <div class="clickSeeDescription">
-              <button (click)='toggleDetails(i)' class="btn btn-dark">Click See Description</button>
+           
+            <div class="clickSeeDescription m-3">
+              <small><button (click)='toggleDetails(i)' class="btn btn-sm btn-dark">See Description</button></small>
             </div>
             
           </div>
+          <!-- <app-quote-detail [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> -->
         
-          <app-quote-detail  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+         <app-quote-detail  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail> 
       </div>
   </div>
   <div class="col-md-5">

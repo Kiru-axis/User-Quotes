@@ -18,23 +18,26 @@ export class QuoteComponent implements OnInit {
     new Quote( 5, "Socrates", "If you begin by sacrificing yourself to those you love, you will end by hating those to whom you have sacrificed yourself." ,new Date(1992, 3,9)),
   ];
 
-  addNewQuote(quote: Quote){
+  addNewQuote(quote){
     let quoteLength = this.quotes.length; //length of quotes in object quotes array
     quote.id = quoteLength+1; //id of newly created array
     quote.completeDate = new Date(quote.completeDate)//assigns current date of generating item in array 
     this.quotes.push(quote) //pushes inputted form contents into object array
   }
 
- toggle=false;
+//  toggle=false;
 
-  toggleDetails(index: any){
+  toggleDetails(index){
     this.quotes[index].showDescription = !this.quotes[index].showDescription;
       // this.toggle=!this.toggle;
   }
 
-  deleteQuote(isComplete: any, index: any){
+  deleteQuote(isComplete, index){
     if (isComplete) {
+      this.quotes.splice(index,1);
+      
       let toDelete = confirm(`Are you sure you want to delete by ${this.quotes[index].author}?`)
+
       
       if(toDelete){
         this.quotes.splice(index,1);
