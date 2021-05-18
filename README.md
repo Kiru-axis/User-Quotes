@@ -1,21 +1,29 @@
-# Quotes
 
-#
-## Name
+### QUOTES FOR THE WORLD
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Prerequisites
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+* Ability to use a digital gadget to view and inout quote
+## Behaviour Development Development
+1. **Display user Quotes**
+* input: User enters his name.
+* input: User enters the quote he/she wants to display.
+* input: User Enters the day during publishing the quote.
+* Output: The users name, quote and date of publish
 
-## BDD
+1. **Displays an error**
+* Users has not entered the name field
+* User has not entered the quote to display
 
 Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory. Use the `--prod` flag for a production build.
 
 ## Languages used
 
+* html
 * Javascript
+* css/bootstrap
+
 
 ## Live Link
 

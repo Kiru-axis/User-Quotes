@@ -13,9 +13,6 @@ export class QuoteComponent implements OnInit {
   quotes: Quote [] = [
     new Quote( 1 ,"Nelson Mandela",  "You can't foresee all the consequences of your actions - But that's no excuse to do nothing.",new Date(2019,6,9),0, 0),
     new Quote( 2, "Robert Mugabe", "It is the peculiar quality of a fool to perceive the faults of others and to forget his own." ,new Date(2011,6,9) ,0, 0),
-    new Quote( 3, "Winston Churchil","The purpose of a storyteller is not to tell you how to think, but to give you questions to think upon." ,new Date(2021,4,10) ,0, 0),
-    new Quote( 4, "Napoleon", "It is the peculiar quality of a fool to perceive the faults of others and to forget his own." ,new Date(2012, 4, 5), 0, 0),
-    new Quote( 5, "Socrates", "If you begin by sacrificing yourself to those you love, you will end by hating those to whom you have sacrificed yourself." ,new Date(1992, 3,9),0, 0),
   ];
 
   addNewQuote(quote){
