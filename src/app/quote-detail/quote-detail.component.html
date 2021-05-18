@@ -5,8 +5,11 @@
             <p>Published: {{quote.completeDate|dateCount}}</p>
             <div class="">
                 <p>Likes</p>
-                <button class="btn btn-success mx-3 btn-sm"(click) = "likes()" >Inspired <span>{{like}}</span></button>
-                <button class="btn btn-dark mx-3 btn-sm" (click) = "dislike()">Not Inspired <span>{{nolike}}</span></button>
+                <div id="upvote">{{quote.upvote}}
+                <button class="btn btn-success mx-3 btn-sm"(click) = "likes()" >Likes:  </button>
+                </div>
+                <div id="downvote">{{quote.downvote}}</div>
+                <button class="btn btn-dark mx-3 btn-sm" (click) = "dislike()">Dislikes: </button>
               </div>
         </div>
         <div class="card-footer">

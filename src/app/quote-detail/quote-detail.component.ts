@@ -15,15 +15,14 @@ export class QuoteDetailComponent implements OnInit {
     this.isComplete.emit(complete);
   }
   //liking events
-  like:number = 0;
-  active:boolean;
+// active:boolean;
 
-  nolike:number = 0;
+
   likes(){
-    this.like ++;
+    this.quote.upvote ++;
   }
   dislike(){
-    this.nolike --;
+    this.quote.downvote --;
   }
  
   constructor() { }
