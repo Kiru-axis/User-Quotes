@@ -1,0 +1,35 @@
+<div class="container-fluid" style="background-color:lightblue;">
+  <h1 style="text-align:center;text-transform:capitalize">{{ title }}</h1> 
+
+  <hr>
+</div>
+<div class="container">
+  
+
+  <div class="row" style="background-color:lightblue;"> 
+    <div class="col-md-1"></div>
+    <div class="col-md-6">
+      <div *ngFor='let quote of quotes; let i= index'>
+          <div class="quote-buttnToggle">
+            <!-- <div>
+              <h4 id="{{i}}"appHighlight>{{quote.author}} due on{{quote.completeDate | date| uppercase}}</h4>
+            </div> -->
+            <div (click)='toggleDetails(i)'  appHighlight> <span id="quoteComponentBinding">{{quote.id}}.  {{quote.author}} due on</span>{{quote.completeDate|date|uppercase}}</div>
+            <div class="clickSeeDescription">
+              <button (click)='toggleDetails(i)' class="btn btn-dark">Click See Description</button>
+            </div>
+            
+          </div>
+        
+          <app-quote-detail  *ngIf='quote.showDescription' [quote]='quote' (isComplete) = 'deleteQuote($event,i)'></app-quote-detail>
+      </div>
+  </div>
+  <div class="col-md-5">
+    <app-quote-form (add)="addNewQuote($event)"></app-quote-form>
+  </div>
+  </div>
+  <p *ngIf='quotes.length >5' style='color: red'>Warning ! <span class="warningText">Philosopher !!</span></p>
+  <hr>
+</div>
+
+
